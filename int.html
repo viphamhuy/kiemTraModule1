@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>int</title>
+</head>
+<body>
+<input type="text" id ="number"/>
+<button onclick="checkprime()">Check Prime</button>
+<p id ="n"></p>
+<script>
+   /* function checknumber() {
+        let number = Number(document.getElementById("number").value);
+        checkprime(n);
+    }*/
+    function checkprime(n) {
+        let a = Number(document.getElementById('number').value);
+        let prime = true;
+        if(a<2)
+        {
+            prime=false;
+        }
+        else {
+            if(a==2)
+            {
+                prime=true;
+            }
+            else
+            {
+                if(a%2==0)
+                {
+                    prime=false;
+                }
+                else
+                {
+                    for(let i=3;i<=Math.sqrt(a);i+=2)
+                    {
+                        if(a%i==0)
+                        {
+                            prime=false;
+                            break;
+                        }
+                    }
+                }
+            }
+
+        }
+        if(prime==true)
+        {
+            document.getElementById('n').innerHTML= a + ' la snt';
+
+        }
+        else
+        {
+            document.getElementById('n').innerHTML= a + ' khong la snt';
+        }
+
+    }
+</script>
+</body>
+</html>
