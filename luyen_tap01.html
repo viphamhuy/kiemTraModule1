@@ -5,42 +5,43 @@
     <title>luyen_tap1</title>
 </head>
 <body>
+<button type="button" onclick="game()">Chơi</button>
 <script>
-   /* Bài 1
-    let i =0;
-    for (;i<1000;i++)
-    {
+    /* Bài 1
+     let i =0;
+     for (;i<1000;i++)
+     {
 
-        if (i<=99)
+         if (i<=99)
+         {
+            document.write(i + '<br>');
+         }
+         else
+         {
+            document.write('Dừng lại!!');
+             break;
+         }
+     }
+     */
+
+    /* Bài 2
+    let a = parseInt(prompt("Nhập nhiệt độ: "));
+    for( let i=0;i<a;i++)
+    {
+        if(a>100)
         {
-           document.write(i + '<br>');
+            a = parseInt(prompt("Giảm nhiệt độ: "));
         }
         else
         {
-           document.write('Dừng lại!!');
-            break;
+            if(a<20)
+            {
+                a = parseInt(prompt("Tăng nhiệt độ: "));
+            }
         }
     }
-    */
-
-   /* Bài 2
-   let a = parseInt(prompt("Nhập nhiệt độ: "));
-   for( let i=0;i<a;i++)
-   {
-       if(a>100)
-       {
-           a = parseInt(prompt("Giảm nhiệt độ: "));
-       }
-       else
-       {
-           if(a<20)
-           {
-               a = parseInt(prompt("Tăng nhiệt độ: "));
-           }
-       }
-   }
-   alert(a + " độ");
-    */
+    alert(a + " độ");
+     */
 
     /* Bài 3
     let fibonacci = parseInt(prompt("Dãy có :  "));
@@ -55,87 +56,107 @@
     }
      */
 
-   /* Bài 4
-   let fibonacci = parseInt(prompt("Dãy có :  "));
-   let f1=0,f2=1;
-   for(let i=0; i<=fibonacci; i++)
-   {
-       let fi = f2;
-       fi=f1+f2;
-       f1=f2;
-       f2=fi;
-       if(fi%5==0)
-       {
-           document.write(fi);
-           break;
-       }
-   }
-    */
+    /* Bài 4
+    let fibonacci = parseInt(prompt("Dãy có :  "));
+    let f1=0,f2=1;
+    for(let i=0; i<=fibonacci; i++)
+    {
+        let fi = f2;
+        fi=f1+f2;
+        f1=f2;
+        f2=fi;
+        if(fi%5==0)
+        {
+            document.write(fi);
+            break;
+        }
+    }
+     */
 
-   /* Bài 5
-   let fibonacci = parseInt(prompt("Dãy có :  "));
-   let f1=0,f2=1;
-   let s=0;
-   for(let i=1; i<=fibonacci; i++)
-   {
-       let fi = f2;
-       fi=f1+f2;
-       f1=f2;
-       f2=fi;
-      // document.write(fi + ',');
-       s = s+fi;
+    /* Bài 5
+    let fibonacci = parseInt(prompt("Dãy có :  "));
+    let f1=0,f2=1;
+    let s=0;
+    for(let i=1; i<=fibonacci; i++)
+    {
+        let fi = f2;
+        fi=f1+f2;
+        f1=f2;
+        f2=fi;
+       // document.write(fi + ',');
+        s = s+fi;
 
-   }
-   document.write(s);
-    */
-
-
-   /* Bài 6
-   let soChiaHet7 = parseInt(prompt("Dãy có :  "));
-   let n=0;
-   let s=0;
-   for( let i = 1; i<=soChiaHet7; i++)
-   {
-       n=n+7;
-       s=s+n;
-   }
-   document.write(s);
-    */
+    }
+    document.write(s);
+     */
 
 
-   /* Bài 7
-   for ( let i = 1; i<=100; i++)
-   {
-       if(i%3==0&&i%5==0)
-       {
-            document.write(  'FizzBuzz' + '<br>')
-
-       }
-       else
-       {
-           if(i%3==0)
-           {
-               document.write(  'Fizz' + '<br>')
-
-           }
-           else
-           {
-               if(i%5==0)
-               {
-                   document.write('Buzz' + '<br>');
-               }
-               else {
-
-                   document.write(i+'<br>');
-               }
-
-           }
-       }
-   }
-    */
+    /* Bài 6
+    let soChiaHet7 = parseInt(prompt("Dãy có :  "));
+    let n=0;
+    let s=0;
+    for( let i = 1; i<=soChiaHet7; i++)
+    {
+        n=n+7;
+        s=s+n;
+    }
+    document.write(s);
+     */
 
 
+    /* Bài 7
+    for ( let i = 1; i<=100; i++)
+    {
+        if(i%3==0&&i%5==0)
+        {
+             document.write(  'FizzBuzz' + '<br>')
 
+        }
+        else
+        {
+            if(i%3==0)
+            {
+                document.write(  'Fizz' + '<br>')
+
+            }
+            else
+            {
+                if(i%5==0)
+                {
+                    document.write('Buzz' + '<br>');
+                }
+                else {
+
+                    document.write(i+'<br>');
+                }
+
+            }
+        }
+    }
+     */
+
+    /* Bài 8
+    function game() {
+        //let a = Math.round(Math.random() * 10);
+        let a=5;
+        let b = parseInt(prompt("Viết số đê: "));
+        let count = 0;
+        while (a != b && count<3) {
+            alert('Sai rồi bạn eii !!')
+            b = parseInt(prompt("Nhập lại đi cưng: "));
+            count ++;
+        }
+        if (a==b){
+            alert("Đúng!! Ghê đấy!")
+        }
+        else {
+            if (count==3){
+                alert("Hết lượt rồi, nhập nhiều.");
+            }
+        }
+
+    }
+     */
 </script>
 </body>
 </html>
