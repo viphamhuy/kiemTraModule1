@@ -5,57 +5,65 @@
     <title>int</title>
 </head>
 <body>
-<input type="text" id ="number"/>
-<button onclick="checkprime()">Check Prime</button>
-<p id ="n"></p>
+<input type="text" id="number">
+<button type="button" id="bt" onclick="checknumber()">Check</button>
+<p id="p"></p>
 <script>
-   /* function checknumber() {
+
+    function checknumber()
+    {
         let number = Number(document.getElementById("number").value);
-        checkprime(n);
-    }*/
-    function checkprime(n) {
-        let a = Number(document.getElementById('number').value);
-        let prime = true;
-        if(a<2)
+        let count=0 ;
+        let n = 2;
+        while (count<number)
         {
-            prime=false;
-        }
-        else {
-            if(a==2)
+            if(checkPrime(n))
             {
-                prime=true;
+                document.write(n+',');
+                count++;
             }
-            else
-            {
-                if(a%2==0)
-                {
-                    prime=false;
-                }
-                else
-                {
-                    for(let i=3;i<=Math.sqrt(a);i+=2)
-                    {
-                        if(a%i==0)
-                        {
-                            prime=false;
-                            break;
-                        }
-                    }
-                }
-            }
-
-        }
-        if(prime==true)
-        {
-            document.getElementById('n').innerHTML= a + ' la snt';
-
-        }
-        else
-        {
-            document.getElementById('n').innerHTML= a + ' khong la snt';
+            n++;
         }
 
     }
+
+    function checkPrime(n)
+    {
+
+            if (n < 2)
+            {
+                return  false;
+            }
+            else
+            {
+                if (n == 2)
+                {
+                    return  true;
+                }
+                else
+                {
+                    if (n % 2 == 0)
+                    {
+                        return  false;
+                    }
+                    else
+                    {
+                        for (let i = 3; i <= Math.sqrt(n); i += 2)
+                        {
+                            if (n % i == 0)
+                            {
+                                return  false;
+                            }
+                        }
+                    }
+                    return  true;
+                }
+
+            }
+
+    }
+
+
 </script>
 </body>
 </html>

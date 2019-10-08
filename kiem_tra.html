@@ -6,52 +6,44 @@
 </head>
 <body>
 <script>
-    let t ;
-    do
-    {
-       t=parseFloat(prompt("Nhập điểm Toán "));
-    }
-    while (t<0||t>10)
-    let v ;
-    do
-    {
-        v = parseFloat(prompt("Nhập điểm Văn "));
-    }
-    while (v<0||v>10)
-    let ta ;
-    do
-    {
-        ta=parseFloat(prompt("Nhập điểm Tiếng anh "));
-    }
-    while (ta<0||ta>10)
-    let DTB = (t*2+v+ta*2)/5;
-    if(DTB<5)
-    {
-        document.write(DTB + ' Không đạt');
-    }
-    else
-    {
-        if(5<=DTB&&DTB<7.5)
-        {
-            document.write(DTB + ' Đạt');
-        }
-        else
-        {
-            if(7.6<=DTB&&DTB<8.5)
-            {
-                document.write(DTB + ' Khá');
-            }
-            else
-            {
-                document.write(DTB + ' Tốt');
-            }
-        }
-    }
-
-
-
-
-
+  let t;
+  do {
+      t = parseFloat(prompt('Nhập điểm toán: '));
+  }
+  while (t<0||t>10)
+  let v;
+  do {
+      v = parseFloat(prompt('Nhập điểm văn: '));
+  }
+  while (v<0||v>10)
+  let ta;
+  do {
+      ta = parseFloat(prompt('Nhập điểm tiếng anh: '));
+  }
+  while (ta<0||ta>10)
+    let dtb=(t*2+v+ta*2)/5;
+  if(dtb<5)
+  {
+        alert(dtb + ' không đạt');
+  }
+  else
+  {
+      if(5<=dtb&&dtb<7)
+      {
+          alert(dtb + ' đạt');
+      }
+      else
+      {
+          if(7.6<=dtb&&dtb<8.5)
+          {
+              alert(dtb + ' khá');
+          }
+          else
+          {
+              alert(dtb + ' tốt');
+          }
+      }
+  }
 
 </script>
 
