@@ -7,18 +7,31 @@
 <body>
 <p id="p"></p>
 <script>
+    /*
     for(let i=1;i<=5;i++)
     {
+        for(let j=1;j<=i;j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+     */
 
-        for(let j=1;j<=10;j++) {
-            if (i==1||i==5||j==1||j==10)
-            {
-                document.write('*');
-            }
-            else
-            {
-                document.write(' ');
-            }
+    /*
+    for(let i=5;i>=1;i--)
+    {
+        for(let j=1;j<=i;j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+     */
+
+    for(let i=5;i>=1;i--)
+    {
+        for(let j=5;j>=i;j--)
+        {
+            document.write('*');
         }
         document.write('<br>');
     }
